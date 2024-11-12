@@ -1,0 +1,694 @@
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat-Bold.ttf");
+    width: 700;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat-Medium.ttf");
+    width: 500;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat-SemiBold.ttf");
+    width: 600px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    font-size: 20px;
+    width: 600;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+body {
+    cursor: url("../image/位置选择.cur"), auto;
+}
+body.black {
+    cursor: url("../image/normal.cur"), auto;
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1486px;
+    margin: 0 auto;
+}
+
+.container_2{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header{
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__burger-btn{
+        display: none;
+        position: relative;
+        width: 60px;
+        height: 60px;
+        margin-top: 70px;
+        border-radius: 10px;
+        background-color: #7B61FF;
+        z-index: 2;
+
+    }
+    &__burger-btn span{
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        background-color: #fff;
+        left: 10px;
+        z-index: 2;
+        transition: transform 0.6s, opacity 0.5s;
+    }
+    &__burger-btn span:nth-child(1){
+        transform: translateY(-10px);
+    }
+    &__burger-btn span:nth-child(3){
+        transform: translateY(10px);
+    }
+    &.open &__burger-btn span:nth-child(1){
+        transform: translateY(0) rotate(-45deg);
+    }
+    &.open &__burger-btn span:nth-child(2){
+        opacity: 0;
+    }
+    &.open &__burger-btn span:nth-child(3){
+        transform: translateY(0) rotate(45deg);
+    }
+    
+    &__image{
+        margin-top: 82px;
+    }
+    &__menu{
+        margin-top: 55px;
+        background-color: #D9D9D9;
+        padding: 11px 60px 20px;
+        border-radius: 25px;
+        display: flex;
+        gap: 60px;
+    }
+    &__link{
+        margin-top: 20px;
+        display: flex;
+        gap: 9px;
+        &-t{
+            transition: .3s;
+        }
+        &-t:hover{
+            transform: scale(1.03);
+        }
+    }
+    &__text{
+        color: #000;
+    }
+    &__registr{
+        display: flex;
+        gap: 15px;
+    }
+    &__vhod{
+        margin-top: 87px;
+    }
+    &__vhod-t{
+        color: #000;
+        font-size: 14px;
+        transition: .3s;
+    }
+    &__vhod-t:hover{
+        font-size: 16px;
+        color: #fff;
+    }
+    &__reg{
+        margin-top: 87px;
+        &-t{
+            font-size: 14px;
+            color: #fff;
+            background-color: #000;
+            padding: 15px 24px;
+            border-radius: 8px;
+            transition: .3s;
+        }
+        &-t:hover{
+            color: #000;
+            background-color: #fff;
+            padding: 17px 26px;
+        }
+    }
+    
+}
+
+.main{
+    margin-top: 234px;
+    &__back{
+        background: url("../image/Saint-Petersburg-Russia-city-night-view-tower-bridge-river_1920x1080\ 1.svg") no-repeat center center/cover;
+        height: 100%;
+        padding: 0 0 350px;
+        margin-bottom: 90px;
+    }
+    &__title{
+        margin-bottom: 80px;
+        &-t{
+            font-size: 64px;
+            width: 600px;
+            color: #fff;
+        }
+    }
+    &__btn{
+        &-t{
+            color: #fff;
+            background-color: #7B61FF;
+            padding: 20px 34px;
+            border-radius: 20px;
+            transition: .5s;
+        }
+        &-t:hover{
+            color: #7B61FF;
+            background-color: #fff;
+            border: 1px solid #7B61FF;
+        }
+    }
+}
+
+.catalog{
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 150px;
+    }
+    &__text{
+        margin-top: 157px;
+        &-t{
+            font-size: 48px;
+        }
+    }
+    &__full-slider{
+        display: flex;
+        gap: 30px;
+    }
+    &__slider{
+        display: block;
+        width: 900px;
+        height: 600px;
+        overflow: hidden;
+        &-line{
+            height: 600px;
+            width: 2700px;
+            display: flex;
+            position: relative;
+            left: 0;
+            transition: all ease 1s;
+        }
+        &-content{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        &-t{
+            font-size: 48px;
+        }
+        &-btn{
+            background-color: #7B61FF;
+            padding: 20px;
+            border-radius: 20px;
+            color: #fff;
+            transition: .5s;
+        }
+        &-btn:hover{
+            color: #7B61FF;
+            background-color: #fff;
+        }
+    }
+} 
+
+
+.moscow{
+    background: url("../image/92eb8fc6-efb6-5b81-8e08-a6c19b9bb554\ 1.svg") no-repeat center center/cover;
+    background-size: 100%;
+    padding: 94px 128px 144px;
+    &__title{
+        display: flex;
+        justify-content: end;
+        &-t{
+            font-size: 64px;
+            width: 700;
+            color: #fff
+        }
+    }
+    &__text{
+        margin-bottom: 330px;
+        &-t{
+            color: #fff;
+            font-size: 32px;
+        }
+    }
+    &__btn{
+        display: flex;
+        justify-content: end;
+        &-t{
+            color: #fff;
+            background-color: #7B61FF;
+            padding: 27px 23px;
+            border-radius: 20px;
+            transition: .5s;
+        }
+        &-t:hover{
+            color: #7B61FF;
+            background-color: #fff;
+            border: 1px solid #7B61FF;
+        }
+    }
+}
+
+.moscow__map{
+    &-wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+    &-karta{
+        display: flex;
+        align-items: center;
+    }
+    &-t{
+        font-size: 64px;
+    }
+    &-m{
+        margin-top: 64px;
+        margin-bottom: 94px;
+    }
+}
+
+.kazan{
+    background: url("../image/night-kazan\ 1.svg") no-repeat center center/cover;
+    background-size: 100%;
+    padding: 94px 128px 144px;
+    &__title{
+        display: flex;
+        justify-content: end;
+        &-t{
+            font-size: 64px;
+            width: 700;
+            color: #fff
+        }
+    }
+    &__text{
+        margin-bottom: 330px;
+        &-t{
+            color: #fff;
+            font-size: 32px;
+        }
+    }
+    &__btn{
+        &-t{
+            color: #fff;
+            background-color: #7B61FF;
+            padding: 27px 23px;
+            border-radius: 20px;
+            transition: .5s;
+        }
+        &-t:hover{
+            color: #7B61FF;
+            background-color: #fff;
+            border: 1px solid #7B61FF;
+        }
+    }
+}
+
+.kazan__map{
+    &-wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+    &-karta{
+        display: flex;
+        align-items: center;
+    }
+    &-t{
+        font-size: 64px;
+    }
+    &-m{
+        margin-top: 94px;
+        margin-bottom: 94px;
+    }
+}
+
+.piter{
+    background: url("../image/6305741532\ 1.svg") no-repeat center center/cover;
+    background-size: 100%;
+    padding: 94px 128px 144px 0px;
+    &__title{
+        display: flex;
+        justify-content: end;
+        &-t{
+            font-size: 64px;
+            width: 700;
+            color: #fff
+        }
+    }
+    &__text{
+        margin-top: 200px;
+        &-t{
+            color: #fff;
+            font-size: 32px;
+        }
+    }
+    &__btn{
+        display: flex;
+        justify-content: end;
+        &-t{
+            color: #fff;
+            background-color: #7B61FF;
+            padding: 27px 23px;
+            border-radius: 20px;
+            transition: .5s;
+        }
+        &-t:hover{
+            color: #7B61FF;
+            background-color: #fff;
+            border: 1px solid #7B61FF;
+        }
+    }
+}
+
+.piter__map{
+    margin-top: 30px;
+    &-wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+    &-karta{
+        display: flex;
+        align-items: center;
+    }
+    &-t{
+        font-size: 64px;
+    }
+    &-m{
+        margin-top: 94px;
+        margin-bottom: 94px;
+    }
+}
+
+.map{
+    &-link{
+        border-radius: 30px;
+    }
+}
+
+.footer {
+    background: rgb(123,97,255);
+    background: linear-gradient(0deg, rgba(123,97,255,1) 0%, rgba(123,97,255,1) 39%, rgba(255,255,255,1) 100%);
+    height: 300px;
+    padding: 75px;
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__link{
+        margin-top: 13px;
+        display: flex;
+        justify-content: space-between;
+        &-t{
+            margin-left: 10px;
+            margin-right: 10px;
+            color: #000;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        &-t:hover{
+            transform: scale(1.05);
+            color: #fff
+        }
+    }
+    &__image{
+        &-t{
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+        &-t:hover{
+            transform: scale(1.05);
+        }
+    }
+    &__line{
+        margin-top: 25px;
+        background-color: #000;
+        padding: 1px;
+        width: 1476px;
+    }
+}
+
+.footer.black{
+    background: rgb(123,97,255);
+    background: linear-gradient(0deg, rgba(123,97,255,1) 47%, rgba(44,44,44,1) 100%);
+    height: 300px;
+    padding: 75px;
+}
+
+@media (max-width: 992px) {
+    body{
+        max-width: 425px;
+    }
+    .container{
+        max-width: 380px;
+        margin: 0 auto;
+    }
+    .header{
+        &__burger-btn{
+            display: block;
+        }
+        &__menu{
+            position: absolute;
+            left: -350px;
+            top: 0;
+            width: 350px;
+            padding: 75px 20px 20px 20px;
+            display: block;
+            transition: transform 0.5s;
+        }
+        &__link_img{
+            display: none;
+        }
+        &__link{
+            display: block;
+        }
+    }
+    .header.open .header__menu{
+        transform: translateX(100%);
+    }
+    .main{
+        margin-top: 100px;
+        &__back{
+            width: 425px;
+        }
+        &__title{
+            margin-bottom: 50px;
+            &-t{
+                font-size: 32px;
+            }
+        }
+        &__btn{
+            &-t{
+                font-size: 16px;
+                color: #fff;
+                background-color: #7B61FF;
+                padding: 15px 28px;
+                border-radius: 20px;
+            }
+        }
+        
+    }
+    .catalog{
+        &__wrap{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 25px;
+            left: 100px;
+        }
+        &__text{
+            margin-top: 25px;
+            &-t{
+                font-size: 32px;
+            }
+        }
+    }
+    .moscow{
+        width: 100vh;
+        padding: 250px 50px 250px;
+        &__title{
+            position: relative;
+            top: 100px;
+            &-t{
+                font-size: 32px;
+                width: 700;
+                color: #fff
+            }
+        }
+        &__text{
+            position: relative;
+            top: 100px;
+            &-t{
+                color: #fff;
+                font-size: 14px;
+            }
+        }
+        &__btn{
+            position: relative;
+            top: -5px;
+        }
+    }
+
+    .moscow__map{
+        position: relative;
+        left: -100px;
+        width: 350px;
+        height: 100px;
+        &-wrap{
+            display: flex;
+            flex-direction: column;
+        }
+        &-t{
+            position: relative;
+            left: 280px;
+            font-size: 48px;
+        }
+        &-m{
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .kazan{
+        width: 100vh;
+        padding: 250px 50px 250px;
+        &__title{
+            position: relative;
+            top: 100px;
+            &-t{
+                font-size: 32px;
+                width: 700;
+                color: #fff
+            }
+        }
+        &__text{
+            position: relative;
+            top: 100px;
+            &-t{
+                color: #fff;
+                font-size: 14px;
+            }
+        }
+    }
+    .kazan__map{
+        position: relative;
+        left: -100px;
+        max-width: 385px;
+        &-wrap{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &-t{
+            position: relative;
+            left: 280px;
+            font-size: 48px;
+        }
+        &-m{
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .piter{
+        width: 100vh;
+        padding: 250px 50px 250px;
+        &__title{
+            position: relative;
+            top: 100px;
+            &-t{
+                font-size: 32px;
+                width: 700;
+                color: #fff
+            }
+        }
+        &__text{
+            position: relative;
+            top: -50px;
+            &-t{
+                color: #fff;
+                font-size: 14px;
+            }
+        }
+        &__btn{
+            position: relative;
+            top: 40px;
+        }
+    }
+
+    .piter__map{
+        position: relative;
+        left: -100px;
+        max-width: 385px;
+        &-wrap{
+            display: flex;
+            flex-direction: column;
+        }
+        &-t{
+            position: relative;
+            left: 280px;
+            font-size: 48px;
+        }
+        &-m{
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .footer{
+        width: 100vh;
+        height: 500px;
+        &__wrap{
+            display: flex;
+            flex-direction: column;
+        }
+        &__logo{
+            display: none;
+        }
+        &__link{
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+        &__image{
+            gap: 10px;
+            margin-top: 10px;
+        }
+        &__line{
+            position: relative;
+            left: -20px;
+            width: 350px;
+        }
+    }
+}
