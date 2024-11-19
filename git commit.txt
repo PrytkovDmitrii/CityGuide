@@ -1,7 +1,0 @@
-git commit 
-git branch -f main C1
-git cherry-pick
-git push
-git clone
-git merge 
-git rebase -i

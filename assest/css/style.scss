@@ -148,7 +148,18 @@ a {
             background-color: #7B61FF;
             color: white;
         }
-
+    }
+    &__prev.dnone{
+        display: none;
+    }
+    &__attract{
+        &-title{
+            margin-bottom: 80px;
+            &-text{
+                text-align: center;
+                font-size: 40px;
+            }
+        }
     }
 }
 
@@ -392,6 +403,9 @@ a {
         row-gap: 30px;
         margin-bottom: 50px;
     }
+    &__all-list.dnone{
+        display: none;
+    }
     &__sort{
         display: flex;
         justify-content: center;
@@ -407,6 +421,9 @@ a {
             border: 1px solid #7B61FF;
             border-radius: 4px;
         }
+    }
+    &__sort.dnone{
+        display: none;
     }
     &__pagin{
         display: flex;
@@ -427,7 +444,65 @@ a {
             color: white;
         }
     }
-
+    &__pagin.dnone{
+        display: none;
+    }
+    &__images {
+        display: flex;
+        justify-content: end;
+        &-img{
+            border-radius: 20px;
+        }
+    }
+    &__imagesTwo {
+        &-img{
+            border-radius: 20px;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        gap: 50px;
+    }
+    &__description{
+        &-title{
+            margin-bottom: 20px;
+            &-text{
+                font-size: 30px;
+            }
+        }
+    }
+    &__attract{
+        &-title{
+            text-align: center;
+            margin-bottom: 30px;
+            &-text{
+                font-size: 30px;
+            }
+        }
+    }
+    &__map{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        &-link{
+            border-radius: 20px;
+        }
+    }
+    &__info{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        margin-bottom: 50px;
+        &-title{
+            text-align: center;
+            margin-bottom: 30px;
+            &-text{
+                font-size: 30px;
+            }
+        }
+    }
 }
 
 .hide{
@@ -612,6 +687,17 @@ a {
     transform: scale(1);
 }
 
+#loader {
+    display: none; /* Скрыт по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Важно! Чтобы лоадер был поверх всего остального */
+  }
+
 .footer {
     background: rgb(123,97,255);
     background: linear-gradient(0deg, rgba(123,97,255,1) 0%, rgba(123,97,255,1) 39%, rgba(255,255,255,1) 100%);
@@ -737,8 +823,8 @@ a {
             }
         }
         &__all-list{
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
+            display: flex;
+            flex-direction: column;
 
         }
         &__sort{
@@ -798,7 +884,6 @@ a {
     }
     .footer{
         height: 500px;
-        min-width: 425px;
         &__wrap{
             display: flex;
             flex-direction: column;

@@ -151,6 +151,16 @@ a {
   background-color: #7B61FF;
   color: white;
 }
+.header__prev.dnone {
+  display: none;
+}
+.header__attract-title {
+  margin-bottom: 80px;
+}
+.header__attract-title-text {
+  text-align: center;
+  font-size: 40px;
+}
 
 .search {
   position: relative;
@@ -386,6 +396,9 @@ a {
   row-gap: 30px;
   margin-bottom: 50px;
 }
+.attractions__all-list.dnone {
+  display: none;
+}
 .attractions__sort {
   display: flex;
   justify-content: center;
@@ -401,6 +414,9 @@ a {
   text-decoration: none;
   border: 1px solid #7B61FF;
   border-radius: 4px;
+}
+.attractions__sort.dnone {
+  display: none;
 }
 .attractions__pagin {
   display: flex;
@@ -419,6 +435,59 @@ a {
 .attractions__pagin-btn:hover {
   background-color: #7B61FF;
   color: white;
+}
+.attractions__pagin.dnone {
+  display: none;
+}
+.attractions__images {
+  display: flex;
+  justify-content: end;
+}
+.attractions__images-img {
+  border-radius: 20px;
+}
+.attractions__imagesTwo-img {
+  border-radius: 20px;
+}
+.attractions__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  gap: 50px;
+}
+.attractions__description-title {
+  margin-bottom: 20px;
+}
+.attractions__description-title-text {
+  font-size: 30px;
+}
+.attractions__attract-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.attractions__attract-title-text {
+  font-size: 30px;
+}
+.attractions__map {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.attractions__map-link {
+  border-radius: 20px;
+}
+.attractions__info {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.attractions__info-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.attractions__info-title-text {
+  font-size: 30px;
 }
 
 .hide {
@@ -599,6 +668,17 @@ a {
   transform: scale(1);
 }
 
+#loader {
+  display: none; /* Скрыт по умолчанию */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* Важно! Чтобы лоадер был поверх всего остального */
+}
+
 .footer {
   background: rgb(123, 97, 255);
   background: linear-gradient(0deg, rgb(123, 97, 255) 0%, rgb(123, 97, 255) 39%, rgb(255, 255, 255) 100%);
@@ -722,8 +802,8 @@ a {
     font-size: 30px;
   }
   .attractions__all-list {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
   }
   .attractions__sort {
     position: relative;
@@ -780,7 +860,6 @@ a {
   }
   .footer {
     height: 500px;
-    min-width: 425px;
   }
   .footer__wrap {
     display: flex;

@@ -1,8 +1,7 @@
-
-const filterBox = document.querySelectorAll('.box');
-
+const apiUrl ='https://6735da235995834c8a945ad9.mockapi.io/api/Attractions'
+const filterBox = document.querySelectorAll('.box')
 document.querySelector('nav').addEventListener('click', event => {
-
+        
     let filterClass = event.target.dataset['f'];
     
     console.log(filterClass)
@@ -14,4 +13,5 @@ document.querySelector('nav').addEventListener('click', event => {
         }
     });
 
-});
+})
+        
