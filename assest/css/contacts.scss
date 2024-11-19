@@ -443,6 +443,57 @@ button{
     padding: 75px;
 }
 
+.loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #e0e0e0;
+    z-index: 1001;
+    &__row{
+        position: relative; 
+        top: 45%; 
+        display: flex;
+        justify-content: center;
+    }
+    &__item {
+        width: 75px;
+        height: 75px;
+        border: 7px solid;
+        border-color: #7B61FF transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: loader-rotate 1s linear infinite;
+    }
+    &__item:last-child {
+        top: auto;
+        bottom: 0;
+        animation-delay: -1s;
+      }  
+}
+
+@keyframes loader-rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+} 
+
+.loaded_hiding .loader {
+    transition: 0.3s opacity;
+    opacity: 0;
+  }
+  
+.loaded .loader {
+    display: none;
+}
+
+
+
 @media (max-width: 992px) {
     body{
         max-width: 425px;
