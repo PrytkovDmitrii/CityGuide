@@ -833,11 +833,10 @@ a {
         transform: translateX(100%);
     }
     .main{
-        position: relative;
-        top: -100px;
+        margin-top: 100px;
         &__back{
             width: 425px;
-            padding: 0 0 200px;
+            height: 700px;
         }
         &__title{
             margin-bottom: 70px;
@@ -857,9 +856,7 @@ a {
         }
     }
     .attractions{
-        scale: 0.75;
-        position: relative;
-        margin-bottom: 10px;
+        margin-top: -50px;
         &__title{
             text-align: center;
             margin-bottom: 30px;
@@ -870,30 +867,73 @@ a {
         &__all-list{
             display: flex;
             flex-direction: column;
-
+        }
+        &__list{
+            width: 350px;
+            height: 325px;
+            &-low{
+                width: 320px;
+                height: 300px;
+            }
+        }
+        &__image{
+            width: 310px;
+            height: auto;
+            &-low{
+                width: 270px;
+                height: auto;
+            }
         }
         &__sort{
-            position: relative;
-            left: 70px;
+            display: flex;
+            justify-content: center;
         }
         &__pagin{
-            position: relative;
-            left: 60px;
+            display: flex;
+            justify-content: center;
         }
         &__left{
-            scale: 0.8;
+            position: relative;
+            top: -50px;
+            scale: 0.5;
         }
         &__right{
-            scale: 0.8;
+            position: relative;
+            top: -50px;
+            scale: 0.5;
         }
         &__full-slider{
             gap: 15px;
         }
+        &__wrapper{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &__images{
+            &-img{
+                width: 375px;
+                height: auto;
+            }
+        }
+        &__imagesTwo{
+            &-img{
+                width: 375px;
+                height: auto;
+            }
+        }
+        &__text{
+            font-size: 16px;
+        }
+        &__local{
+            text-align: left;
+            &-t{
+                font-size: 14px;
+            }
+        }
     }
+
     .attractions_kazan{
-        position: relative;
-        scale: 0.75;
-        margin-bottom: 10px;
+        margin-top: -50px;
         &__title{
             text-align: center;
             margin-bottom: 30px;
@@ -902,16 +942,33 @@ a {
             }
         }
         &__left{
-            scale: 0.8;
+            position: relative;
+            top: -50px;
+            scale: 0.5;
         }
         &__right{
-            scale: 0.8;
+            position: relative;
+            top: -50px;
+            scale: 0.5;
+        }
+        &__full-slider{
+            gap: 15px;
+        }
+        &__text{
+            font-size: 16px;
+            &-small{
+                font-size: 14px;
+            }
+        }
+        &__local{
+            text-align: left;
+            &-t{
+                font-size: 14px;
+            }
         }
     }
     .attractions_piter{
-        position: relative;
-        scale: 0.75;
-        margin-bottom: 10px;
+        margin-top: -50px;
         &__title{
             text-align: center;
             margin-bottom: 30px;
@@ -920,10 +977,26 @@ a {
             }
         }
         &__left{
-            scale: 0.8;
+            position: relative;
+            top: -50px;
+            scale: 0.5;
         }
         &__right{
-            scale: 0.8;
+            position: relative;
+            top: -50px;
+            scale: 0.5;
+        }
+        &__full-slider{
+            gap: 15px;
+        }
+        &__text{
+            font-size: 16px;
+        }
+        &__local{
+            text-align: left;
+            &-t{
+                font-size: 14px;
+            }
         }
         
     }
@@ -950,6 +1023,12 @@ a {
             left: -20px;
             width: 350px;
         }
+        &__text{
+            font-size: 16px;
+        }
+    }
+    .footer.black{
+        height: 500px;
     }
     .modal{
         scale: 0.7;

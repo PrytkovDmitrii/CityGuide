@@ -493,11 +493,8 @@ a {
 }
 
 @media (max-width: 992px) {
-  body {
-    max-width: 425px;
-  }
   .container {
-    max-width: 380px;
+    max-width: 385px;
     margin: 0 auto;
   }
   .header__burger-btn {
@@ -525,7 +522,8 @@ a {
     margin-top: 100px;
   }
   .main__back {
-    width: 425px;
+    min-width: 425px;
+    padding: 0 0 175px;
   }
   .main__title {
     margin-bottom: 50px;
@@ -541,146 +539,234 @@ a {
     border-radius: 20px;
   }
   .catalog__wrap {
-    position: relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px;
-    left: 100px;
+    text-align: center;
+    margin-bottom: 0px;
   }
   .catalog__text {
-    margin-top: 25px;
+    margin-top: 0;
+    margin-bottom: 30px;
   }
   .catalog__text-t {
     font-size: 32px;
   }
+  .catalog__left {
+    position: relative;
+    top: -200px;
+    scale: 0.4;
+  }
+  .catalog__right {
+    position: relative;
+    top: -200px;
+    scale: 0.4;
+  }
+  .catalog__slider-list {
+    width: 310px;
+    height: auto;
+  }
+  .catalog__full-slider {
+    gap: 5px;
+  }
+  .catalog__slider-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .catalog__slider-t {
+    font-size: 32px;
+  }
+  .catalog__slider-btn {
+    font-size: 14px;
+    background-color: #7B61FF;
+    padding: 5px;
+    border-radius: 10px;
+    color: #fff;
+    transition: 0.5s;
+  }
   .moscow {
-    width: 100vh;
-    padding: 250px 50px 250px;
+    position: relative;
+    top: -400px;
+    width: 425px;
   }
   .moscow__title {
-    position: relative;
-    top: 100px;
+    display: flex;
+    justify-content: center;
   }
   .moscow__title-t {
     font-size: 32px;
     width: 700;
-    color: #fff;
+    color: #000;
   }
   .moscow__text {
     position: relative;
-    top: 100px;
+    top: 250px;
+    left: -90px;
+    margin-bottom: 30px;
+    width: 385px;
   }
   .moscow__text-t {
-    color: #fff;
+    color: #000;
     font-size: 14px;
   }
   .moscow__btn {
     position: relative;
-    top: -5px;
+    top: 240px;
+    display: flex;
+    justify-content: center;
+  }
+  .moscow__btn-t {
+    font-size: 12px;
+    color: #fff;
+    background-color: #7B61FF;
+    padding: 17px 20px;
+    border-radius: 15px;
+    transition: 0.5s;
   }
   .moscow__map {
     position: relative;
-    left: -100px;
-    width: 350px;
-    height: 100px;
+    top: -220px;
   }
   .moscow__map-wrap {
     display: flex;
     flex-direction: column;
   }
+  .moscow__map-karta {
+    justify-content: center;
+  }
   .moscow__map-t {
-    position: relative;
-    left: 280px;
-    font-size: 48px;
+    font-size: 30px;
   }
   .moscow__map-m {
     margin-top: 30px;
     margin-bottom: 30px;
   }
   .kazan {
-    width: 100vh;
-    padding: 250px 50px 250px;
+    position: relative;
+    top: -300px;
+    width: 425px;
   }
   .kazan__title {
-    position: relative;
-    top: 100px;
+    display: flex;
+    justify-content: center;
   }
   .kazan__title-t {
     font-size: 32px;
     width: 700;
-    color: #fff;
+    color: #000;
   }
   .kazan__text {
     position: relative;
-    top: 100px;
+    top: 260px;
+    left: -70px;
+    margin-bottom: 30px;
+    width: 385px;
   }
   .kazan__text-t {
-    color: #fff;
+    color: #000;
     font-size: 14px;
   }
-  .kazan__map {
+  .kazan__btn {
     position: relative;
-    left: -100px;
-    max-width: 385px;
+    top: 260px;
+    display: flex;
+    justify-content: center;
+  }
+  .kazan__btn-t {
+    font-size: 12px;
+    color: #fff;
+    background-color: #7B61FF;
+    padding: 17px 20px;
+    border-radius: 15px;
+    transition: 0.5s;
+  }
+  .kazan__map {
+    top: -150px;
+    position: relative;
   }
   .kazan__map-wrap {
     display: flex;
     flex-direction: column-reverse;
   }
+  .kazan__map-karta {
+    justify-content: center;
+  }
   .kazan__map-t {
-    position: relative;
-    left: 280px;
-    font-size: 48px;
+    font-size: 30px;
   }
   .kazan__map-m {
     margin-top: 30px;
     margin-bottom: 30px;
   }
   .piter {
-    width: 100vh;
-    padding: 250px 50px 250px;
+    position: relative;
+    top: -300px;
+    width: 425px;
   }
   .piter__title {
     position: relative;
     top: 100px;
+    width: 425px;
+    display: flex;
+    justify-content: center;
   }
   .piter__title-t {
     font-size: 32px;
     width: 700;
-    color: #fff;
+    color: #000;
   }
   .piter__text {
     position: relative;
-    top: -50px;
+    top: 180px;
+    left: 90px;
+    margin-bottom: 30px;
+    width: 385px;
   }
   .piter__text-t {
-    color: #fff;
+    color: #000;
     font-size: 14px;
   }
   .piter__btn {
     position: relative;
-    top: 40px;
+    top: 190px;
+    width: 425px;
+    display: flex;
+    justify-content: center;
+  }
+  .piter__btn-t {
+    font-size: 12px;
+    color: #fff;
+    background-color: #7B61FF;
+    padding: 17px 20px;
+    border-radius: 15px;
+    transition: 0.5s;
   }
   .piter__map {
     position: relative;
-    left: -100px;
-    max-width: 385px;
+    top: -220px;
   }
   .piter__map-wrap {
     display: flex;
     flex-direction: column;
   }
-  .piter__map-t {
+  .piter__map-karta {
     position: relative;
-    left: 280px;
-    font-size: 48px;
+    left: -15px;
+    width: 425px;
+    display: flex;
+    justify-content: center;
+  }
+  .piter__map-t {
+    font-size: 26px;
   }
   .piter__map-m {
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: -120px;
+  }
+  .map-link {
+    width: 385px;
+    height: 300px;
   }
   .footer {
-    width: 100vh;
     height: 500px;
   }
   .footer__wrap {
@@ -703,5 +789,11 @@ a {
     position: relative;
     left: -20px;
     width: 350px;
+  }
+  .footer__text {
+    font-size: 16px;
+  }
+  .footer.black {
+    height: 500px;
   }
 }/*# sourceMappingURL=main.css.map */

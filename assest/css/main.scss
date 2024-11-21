@@ -225,7 +225,6 @@ a {
         &-content{
             display: flex;
             justify-content: space-between;
-            
         }
         &-t{
             font-size: 48px;
@@ -520,11 +519,8 @@ a {
 
   
 @media (max-width: 992px) {
-    body{
-        max-width: 425px;
-    }
     .container{
-        max-width: 380px;
+        max-width: 385px;
         margin: 0 auto;
     }
     .header{
@@ -553,7 +549,8 @@ a {
     .main{
         margin-top: 100px;
         &__back{
-            width: 425px;
+            min-width: 425px;
+            padding: 0 0 175px;
         }
         &__title{
             margin-bottom: 50px;
@@ -574,58 +571,105 @@ a {
     }
     .catalog{
         &__wrap{
-            position: relative;
             display: flex;
             flex-direction: column;
-            margin-bottom: 25px;
-            left: 100px;
+            text-align: center;
+            margin-bottom: 0px;
         }
         &__text{
-            margin-top: 25px;
+            margin-top: 0;
+            margin-bottom: 30px;
             &-t{
                 font-size: 32px;
             }
         }
+        &__left{
+            position: relative;
+            top: -200px;
+            scale: 0.4;
+        }
+        &__right{
+            position: relative;
+            top: -200px;
+            scale: 0.4;
+        }
+        &__slider-list{
+            width: 310px;
+            height: auto;
+        }
+        &__full-slider{
+            gap: 5px;
+        }
+        &__slider{
+           &-content{
+            display: flex;
+            flex-direction: column;
+            } 
+            &-t{
+                font-size: 32px;
+            }
+            &-btn{
+                font-size: 14px;
+                background-color: #7B61FF;
+                padding: 5px;
+                border-radius: 10px;
+                color: #fff;
+                transition: .5s;
+            }
+        }  
     }
     .moscow{
-        width: 100vh;
-        padding: 250px 50px 250px;
+        position: relative;
+        top: -400px;
+        width: 425px;
         &__title{
-            position: relative;
-            top: 100px;
+            display: flex;
+            justify-content: center;
             &-t{
                 font-size: 32px;
                 width: 700;
-                color: #fff
+                color: #000
             }
         }
         &__text{
             position: relative;
-            top: 100px;
+            top: 250px;
+            left: -90px;
+            margin-bottom: 30px;
+            width: 385px;
             &-t{
-                color: #fff;
+                color: #000;
                 font-size: 14px;
             }
         }
         &__btn{
             position: relative;
-            top: -5px;
+            top: 240px;
+            display: flex;
+            justify-content: center;
+            &-t{
+                font-size: 12px;
+                color: #fff;
+                background-color: #7B61FF;
+                padding: 17px 20px;
+                border-radius: 15px;
+                transition: .5s;
+            }
         }
     }
 
     .moscow__map{
         position: relative;
-        left: -100px;
-        width: 350px;
-        height: 100px;
+        top: -220px;
         &-wrap{
             display: flex;
             flex-direction: column;
         }
+        &-karta{
+            justify-content: center;
+        }
         &-t{
-            position: relative;
-            left: 280px;
-            font-size: 48px;
+            font-size: 30px;
         }
         &-m{
             margin-top: 30px;
@@ -634,38 +678,57 @@ a {
     }
 
     .kazan{
-        width: 100vh;
-        padding: 250px 50px 250px;
+        position: relative;
+        top: -300px;
+        width: 425px;
         &__title{
-            position: relative;
-            top: 100px;
+            display: flex;
+            justify-content: center;
             &-t{
                 font-size: 32px;
                 width: 700;
-                color: #fff
+                color: #000
             }
         }
         &__text{
             position: relative;
-            top: 100px;
+            top: 260px;
+            left: -70px;
+            margin-bottom: 30px;
+            width: 385px;
             &-t{
-                color: #fff;
+                color: #000;
                 font-size: 14px;
             }
         }
+        &__btn{
+            position: relative;
+            top: 260px;
+            display: flex;
+            justify-content: center;
+            &-t{
+                font-size: 12px;
+                color: #fff;
+                background-color: #7B61FF;
+                padding: 17px 20px;
+                border-radius: 15px;
+                transition: .5s;
+            }
+        }
     }
+
     .kazan__map{
+        top: -150px;
         position: relative;
-        left: -100px;
-        max-width: 385px;
         &-wrap{
             display: flex;
             flex-direction: column-reverse;
         }
+        &-karta{
+            justify-content: center;
+        }
         &-t{
-            position: relative;
-            left: 280px;
-            font-size: 48px;
+            font-size: 30px;
         }
         &-m{
             margin-top: 30px;
@@ -674,52 +737,80 @@ a {
     }
 
     .piter{
-        width: 100vh;
-        padding: 250px 50px 250px;
+        position: relative;
+        top: -300px;
+        width: 425px;
         &__title{
             position: relative;
             top: 100px;
+            width: 425px;
+            display: flex;
+            justify-content: center;
             &-t{
                 font-size: 32px;
                 width: 700;
-                color: #fff
+                color: #000
             }
         }
         &__text{
             position: relative;
-            top: -50px;
+            top: 180px;
+            left: 90px;
+            margin-bottom: 30px;
+            width: 385px;
             &-t{
-                color: #fff;
+                color: #000;
                 font-size: 14px;
             }
         }
         &__btn{
             position: relative;
-            top: 40px;
+            top: 190px;
+            width: 425px;
+            display: flex;
+            justify-content: center;
+            &-t{
+                font-size: 12px;
+                color: #fff;
+                background-color: #7B61FF;
+                padding: 17px 20px;
+                border-radius: 15px;
+                transition: .5s;
+            }
         }
     }
 
     .piter__map{
         position: relative;
-        left: -100px;
-        max-width: 385px;
+        top: -220px;
         &-wrap{
             display: flex;
             flex-direction: column;
         }
-        &-t{
+        &-karta{
             position: relative;
-            left: 280px;
-            font-size: 48px;
+            left: -15px;
+            width: 425px;
+            display: flex;
+            justify-content: center;
+        }
+        &-t{
+            font-size: 26px;
         }
         &-m{
             margin-top: 30px;
-            margin-bottom: 30px;
+            margin-bottom: -120px;
+        }
+    }
+
+    .map{
+        &-link{
+            width: 385px;
+            height: 300px;
         }
     }
 
     .footer{
-        width: 100vh;
         height: 500px;
         &__wrap{
             display: flex;
@@ -742,5 +833,11 @@ a {
             left: -20px;
             width: 350px;
         }
+        &__text{
+            font-size: 16px;
+        }
+    }
+    .footer.black{
+        height: 500px;
     }
 }

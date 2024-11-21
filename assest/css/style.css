@@ -810,12 +810,11 @@ a {
     transform: translateX(100%);
   }
   .main {
-    position: relative;
-    top: -100px;
+    margin-top: 100px;
   }
   .main__back {
     width: 425px;
-    padding: 0 0 200px;
+    height: 700px;
   }
   .main__title {
     margin-bottom: 70px;
@@ -834,9 +833,7 @@ a {
     border-radius: 15px;
   }
   .attractions {
-    scale: 0.75;
-    position: relative;
-    margin-bottom: 10px;
+    margin-top: -50px;
   }
   .attractions__title {
     text-align: center;
@@ -849,27 +846,66 @@ a {
     display: flex;
     flex-direction: column;
   }
+  .attractions__list {
+    width: 350px;
+    height: 325px;
+  }
+  .attractions__list-low {
+    width: 320px;
+    height: 300px;
+  }
+  .attractions__image {
+    width: 310px;
+    height: auto;
+  }
+  .attractions__image-low {
+    width: 270px;
+    height: auto;
+  }
   .attractions__sort {
-    position: relative;
-    left: 70px;
+    display: flex;
+    justify-content: center;
   }
   .attractions__pagin {
-    position: relative;
-    left: 60px;
+    display: flex;
+    justify-content: center;
   }
   .attractions__left {
-    scale: 0.8;
+    position: relative;
+    top: -50px;
+    scale: 0.5;
   }
   .attractions__right {
-    scale: 0.8;
+    position: relative;
+    top: -50px;
+    scale: 0.5;
   }
   .attractions__full-slider {
     gap: 15px;
   }
+  .attractions__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .attractions__images-img {
+    width: 375px;
+    height: auto;
+  }
+  .attractions__imagesTwo-img {
+    width: 375px;
+    height: auto;
+  }
+  .attractions__text {
+    font-size: 16px;
+  }
+  .attractions__local {
+    text-align: left;
+  }
+  .attractions__local-t {
+    font-size: 14px;
+  }
   .attractions_kazan {
-    position: relative;
-    scale: 0.75;
-    margin-bottom: 10px;
+    margin-top: -50px;
   }
   .attractions_kazan__title {
     text-align: center;
@@ -879,15 +915,32 @@ a {
     font-size: 30px;
   }
   .attractions_kazan__left {
-    scale: 0.8;
+    position: relative;
+    top: -50px;
+    scale: 0.5;
   }
   .attractions_kazan__right {
-    scale: 0.8;
+    position: relative;
+    top: -50px;
+    scale: 0.5;
+  }
+  .attractions_kazan__full-slider {
+    gap: 15px;
+  }
+  .attractions_kazan__text {
+    font-size: 16px;
+  }
+  .attractions_kazan__text-small {
+    font-size: 14px;
+  }
+  .attractions_kazan__local {
+    text-align: left;
+  }
+  .attractions_kazan__local-t {
+    font-size: 14px;
   }
   .attractions_piter {
-    position: relative;
-    scale: 0.75;
-    margin-bottom: 10px;
+    margin-top: -50px;
   }
   .attractions_piter__title {
     text-align: center;
@@ -897,10 +950,26 @@ a {
     font-size: 30px;
   }
   .attractions_piter__left {
-    scale: 0.8;
+    position: relative;
+    top: -50px;
+    scale: 0.5;
   }
   .attractions_piter__right {
-    scale: 0.8;
+    position: relative;
+    top: -50px;
+    scale: 0.5;
+  }
+  .attractions_piter__full-slider {
+    gap: 15px;
+  }
+  .attractions_piter__text {
+    font-size: 16px;
+  }
+  .attractions_piter__local {
+    text-align: left;
+  }
+  .attractions_piter__local-t {
+    font-size: 14px;
   }
   .footer {
     height: 500px;
@@ -925,6 +994,12 @@ a {
     position: relative;
     left: -20px;
     width: 350px;
+  }
+  .footer__text {
+    font-size: 16px;
+  }
+  .footer.black {
+    height: 500px;
   }
   .modal {
     scale: 0.7;
