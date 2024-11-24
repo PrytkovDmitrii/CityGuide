@@ -966,6 +966,14 @@ a {
                 font-size: 14px;
             }
         }
+        &__list{
+            width: 350px;
+            height: 325px;
+            &-low{
+                width: 320px;
+                height: 300px;
+            }
+        }
     }
     .attractions_piter{
         margin-top: -50px;
@@ -996,6 +1004,14 @@ a {
             text-align: left;
             &-t{
                 font-size: 14px;
+            }
+        }
+        &__list{
+            width: 350px;
+            height: 325px;
+            &-low{
+                width: 320px;
+                height: 300px;
             }
         }
         
