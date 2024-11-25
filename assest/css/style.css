@@ -951,14 +951,6 @@ a {
   .attractions_kazan__local-t {
     font-size: 14px;
   }
-  .attractions_kazan__list {
-    width: 350px;
-    height: 325px;
-  }
-  .attractions_kazan__list-low {
-    width: 320px;
-    height: 300px;
-  }
   .attractions_piter {
     margin-top: -50px;
   }
@@ -990,14 +982,6 @@ a {
   }
   .attractions_piter__local-t {
     font-size: 14px;
-  }
-  .attractions_piter__list {
-    width: 350px;
-    height: 325px;
-  }
-  .attractions_piter__list-low {
-    width: 320px;
-    height: 300px;
   }
   .footer {
     height: 500px;
