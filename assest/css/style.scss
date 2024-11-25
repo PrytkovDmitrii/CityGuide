@@ -447,6 +447,11 @@ a {
     &__pagin.dnone{
         display: none;
     }
+    &__image {
+        width: 450px;
+        height: 300px;
+        border-radius: 20px;
+    }
     &__images {
         display: flex;
         justify-content: end;
@@ -914,6 +919,10 @@ a {
                 width: 375px;
                 height: auto;
             }
+        }
+        &__image{
+            width: 310px;
+            height: 210px;
         }
         &__imagesTwo{
             &-img{

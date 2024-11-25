@@ -439,6 +439,11 @@ a {
 .attractions__pagin.dnone {
   display: none;
 }
+.attractions__image {
+  width: 450px;
+  height: 300px;
+  border-radius: 20px;
+}
 .attractions__images {
   display: flex;
   justify-content: end;
@@ -890,6 +895,10 @@ a {
   .attractions__images-img {
     width: 375px;
     height: auto;
+  }
+  .attractions__image {
+    width: 310px;
+    height: 210px;
   }
   .attractions__imagesTwo-img {
     width: 375px;
