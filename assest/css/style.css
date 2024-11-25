@@ -342,6 +342,7 @@ a {
   cursor: pointer;
 }
 .attractions__text {
+  text-align: left;
   margin-top: 10px;
   color: #000;
   display: flex;
@@ -439,6 +440,11 @@ a {
 .attractions__pagin.dnone {
   display: none;
 }
+.attractions__image {
+  width: 450px;
+  height: 300px;
+  border-radius: 20px;
+}
 .attractions__images {
   display: flex;
   justify-content: end;
@@ -519,6 +525,7 @@ a {
   cursor: pointer;
 }
 .attractions_kazan__text {
+  text-align: left;
   margin-top: 10px;
   color: #000;
   display: flex;
@@ -579,6 +586,7 @@ a {
   cursor: pointer;
 }
 .attractions_piter__text {
+  text-align: left;
   margin-top: 10px;
   color: #000;
   display: flex;
@@ -891,6 +899,10 @@ a {
     width: 375px;
     height: auto;
   }
+  .attractions__image {
+    width: 310px;
+    height: 210px;
+  }
   .attractions__imagesTwo-img {
     width: 375px;
     height: auto;
@@ -939,6 +951,14 @@ a {
   .attractions_kazan__local-t {
     font-size: 14px;
   }
+  .attractions_kazan__list {
+    width: 350px;
+    height: 325px;
+  }
+  .attractions_kazan__list-low {
+    width: 320px;
+    height: 300px;
+  }
   .attractions_piter {
     margin-top: -50px;
   }
@@ -970,6 +990,14 @@ a {
   }
   .attractions_piter__local-t {
     font-size: 14px;
+  }
+  .attractions_piter__list {
+    width: 350px;
+    height: 325px;
+  }
+  .attractions_piter__list-low {
+    width: 320px;
+    height: 300px;
   }
   .footer {
     height: 500px;

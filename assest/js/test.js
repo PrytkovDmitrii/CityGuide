@@ -10,7 +10,7 @@ function displayAttractions(attractions) {
     attractionsList.innerHTML = ''; 
     document.getElementById('list' + i).addEventListener('click', event => {
       document.getElementById("attractions__sort").classList.add("dnone");
-      document.getElementById("attractions__all-list").classList.add("dnone");
+      document.getElementById("Attractions").classList.add("dnone");
       document.getElementById("attractions__pagin").classList.add("dnone");
       document.getElementById("header__prev").classList.add("dnone");
       attractions.forEach(attraction => {

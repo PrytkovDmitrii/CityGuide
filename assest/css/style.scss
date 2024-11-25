@@ -347,6 +347,7 @@ a {
         cursor: pointer;
     }
     &__text{
+        text-align: left;
         margin-top: 10px;
         color: #000;
         display: flex;
@@ -447,6 +448,11 @@ a {
     &__pagin.dnone{
         display: none;
     }
+    &__image {
+        width: 450px;
+        height: 300px;
+        border-radius: 20px;
+    }
     &__images {
         display: flex;
         justify-content: end;
@@ -533,6 +539,7 @@ a {
         cursor: pointer;
     }
     &__text{
+        text-align: left;
         margin-top: 10px;
         color: #000;
         display: flex;
@@ -595,6 +602,7 @@ a {
         cursor: pointer;
     }
     &__text{
+        text-align: left;
         margin-top: 10px;
         color: #000;
         display: flex;
@@ -915,6 +923,10 @@ a {
                 height: auto;
             }
         }
+        &__image{
+            width: 310px;
+            height: 210px;
+        }
         &__imagesTwo{
             &-img{
                 width: 375px;
@@ -966,6 +978,14 @@ a {
                 font-size: 14px;
             }
         }
+        &__list{
+            width: 350px;
+            height: 325px;
+            &-low{
+                width: 320px;
+                height: 300px;
+            }
+        }
     }
     .attractions_piter{
         margin-top: -50px;
@@ -996,6 +1016,14 @@ a {
             text-align: left;
             &-t{
                 font-size: 14px;
+            }
+        }
+        &__list{
+            width: 350px;
+            height: 325px;
+            &-low{
+                width: 320px;
+                height: 300px;
             }
         }
         
