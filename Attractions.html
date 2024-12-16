@@ -10,16 +10,16 @@
 
 <body id = "body">
     <div class="main__back">
-        <header class="header">
-            <div class="container">
+        <header class="header" id="header">
+            <div class="container" id = "line">
                 <div class="header__wrap">
                     <button class="header__burger-btn" id="burger">
                         <span></span><span></span><span></span>
                     </button>
-                    <div class="header__image">
+                    <div class="header__image animate-left">
                         <img src="assest\image\logo 1.svg" alt="logo">
                     </div>
-                    <div class="header__menu">
+                    <div class="header__menu animate-down">
                         <div class="header__link">
                             <div class="header__link_img">
                                 <img src="assest\image\newspaper.svg" alt="newspaper">
@@ -65,42 +65,12 @@
                             <div class="input">
                                 <input type="text" placeholder="Поиск" id="searchbar" name="search" onkeyup="search_attraction()">
                             </div>
-                            <ul id='list'>
-                                <li id="open-msc-1" class="search_attractions">Храм Василия Блаженного</li>
-                                <li id="open-msc-2" class="search_attractions">Красная площадь</li>
-                                <li id="open-msc-3" class="search_attractions">Кремль</li>
-                                <li id="open-msc-4" class="search_attractions">Исторический музей</li>
-                                <li id="open-msc-5" class="search_attractions">Мавзолей</li>
-                                <li id="open-msc-6" class="search_attractions">Храм Христа Спасителя</li>
-                                <li id="open-msc-7" class="search_attractions">Большой театр</li>
-                                <li id="open-msc-8" class="search_attractions">Третьяковская галерея</li>
-                                <li id="open-msc-9" class="search_attractions">Воробьевы горы</li>
-                                <li id="open-msc-10" class="search_attractions">Парк Горького</li>
-                                <li id="open-msc-11" class="search_attractions">Башня Сююмбике</li>
-                                <li id="open-msc-12" class="search_attractions">Национальный музей Республики Татарстан
-                                </li>
-                                <li id="open-msc-13" class="search_attractions">Улица Баумана</li>
-                                <li id="open-msc-14" class="search_attractions">Пушечный двор</li>
-                                <li id="open-msc-15" class="search_attractions">Губернаторский (президентский) дворец
-                                </li>
-                                <li id="open-msc-16" class="search_attractions">Мечеть Кул-Шариф</li>
-                                <li id="open-msc-17" class="search_attractions">Кремлёвская набережная</li>
-                                <li id="open-msc-18" class="search_attractions">Центр семьи «Казан»</li>
-                                <li id="open-msc-19" class="search_attractions">Благовещенский собор</li>
-                                <li id="open-msc-20" class="search_attractions">Театр кукол «Экият»</li>
-                                <li id="open-msc-21" class="search_attractions">Невский проспект</li>
-                                <li id="open-msc-22" class="search_attractions">Русский музей</li>
-                                <li id="open-msc-23" class="search_attractions">Петропавловская крепость</li>
-                                <li id="open-msc-24" class="search_attractions">Храм Спаса на Крови</li>
-                                <li id="open-msc-25" class="search_attractions">Эрмитаж</li>
-                                <li id="open-msc-26" class="search_attractions">Мариинский театр</li>
-                                <li id="open-msc-27" class="search_attractions">Летний сад</li>
-                                <li id="open-msc-28" class="search_attractions">Казанский собор</li>
-                                <li id="open-msc-29" class="search_attractions">Кунсткамера</li>
-                                <li id="open-msc-30" class="search_attractions"> Исаакиевский собор</li>
-                            </ul>
+                            <ul id="input"></ul>
                             <span class="clear"></span>
                         </form>
+                        <form class="header__switch" id="returnBlack">
+                            <img class="header__switch-img" src="./assest/image/result_3dac58864881d859b7da50510e9daa13-no-bg-preview (carve.photos).png" width="40" alt="" id = 'sun'>
+                        </form>    
                     </div>
                 </div>
             </div>
@@ -109,7 +79,7 @@
             <div class="container">
                 <div class="main__content">
                     <div class="main__title">
-                        <h1 class="main__title-t">
+                        <h1 class="main__title-t animate-left">
                             Добро пожаловать в наш раздел, <br>
                             посвященный удивительным <br>
                             достопримечательностям! Здесь<br>
@@ -119,7 +89,7 @@
                             местам наших регионов.
                         </h1>
                     </div>
-                    <div class="main__btn">
+                    <div class="main__btn animate-up">
                         <a href="#attractions" class="main__btn-t">
                             Узнать больше ⮕
                         </a>
@@ -133,18 +103,18 @@
             <section class="attractions" id="attractions">
                 <div class="container2">
                     <div class="attractions__title">
-                        <h1 class="attractions__title-t">
+                        <h1 class="attractions__title-t animate-left"> 
                             Достопримечательности Москвы
                         </h1>
                     </div>
                     <div class="attractions__full-slider">
-                        <button class="attractions__left">
+                        <button class="attractions__left animate-left">
                             <img src="assest\image\Vectorl.svg" alt="стрелочка">
                         </button>
                         <div class="attractions__slider">
                             <div class="attractions__slider-line">
                                 <div class="attractions__list attractions__list-low">
-                                    <button href="#" class="attractions-link__list" id="open-msc-1111">
+                                    <button href="#" class="attractions-link__list" id="open-msc-100">
                                         <div class="attractions__image-low">
                                             <img class="attractions__image-low" src="/assest/image/загруженное 1.svg" alt="attraction">
                                         </div>
@@ -165,7 +135,7 @@
                                 </div>
                                 <div class="modal" id="modal-msc-1">
                                     <div class="modal-window">
-                                        <button class="modal-close" id="close_modal">
+                                        <button class="modal-close" id="close_modal-1">
                                             <img src="./assest/image/крестик.svg" alt="">
                                         </button>
                                         <div class="modal-image">
@@ -198,7 +168,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list attractions__list-low">
-                                    <button href="#" class="attractions-link__list" id="open-msc-2111">
+                                    <button href="#" class="attractions-link__list" id="open-msc-200">
                                         <div class="attractions__image-low">
                                             <img class="attractions__image-low" src="./assest/image/redmsc.svg" alt="attraction">
                                         </div>
@@ -252,7 +222,7 @@
                                 </div>
 
                                 <div class="attractions__list attractions__list-low">
-                                    <button href="#" class="attractions-link__list" id="open-msc-31">
+                                    <button href="#" class="attractions-link__list" id="open-msc-300">
                                         <div class="attractions__image-low">
                                             <img class="attractions__image-low" src="./assest/image/kreml.svg" alt="attraction">
                                         </div>
@@ -310,7 +280,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list attractions__list-low">
-                                    <button href="#" class="attractions-link__list" id="open-msc-41">
+                                    <button href="#" class="attractions-link__list" id="open-msc-400">
                                         <div class="attractions__image-low">
                                             <img class="attractions__image-low" src="./assest/image/museum_msc.svg" alt="attraction">
                                         </div>
@@ -364,7 +334,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list attractions__list-low">
-                                    <button href="#" class="attractions-link__list" id="open-msc-51">
+                                    <button href="#" class="attractions-link__list" id="open-msc-500">
                                         <div class="attractions__image-low">
                                             <img class="attractions__image-low" src="./assest/image/mavsolei.svg" alt="attraction">
                                         </div>
@@ -418,7 +388,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list attractions__list-low">
-                                    <button href="#" class="attractions-link__list" id="open-msc-61">
+                                    <button href="#" class="attractions-link__list" id="open-msc-600">
                                         <div class="attractions__image-low">
                                             <img class="attractions__image-low" src="./assest/image/храммск.svg" alt="attraction">
                                         </div>
@@ -473,7 +443,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list attractions__list-low">
-                                    <button href="#" class="attractions-link__list" id="open-msc-71">
+                                    <button href="#" class="attractions-link__list" id="open-msc-700">
                                         <div class="attractions__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Большой театр.svg" alt="attraction">
                                         </div>
@@ -529,7 +499,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list attractions__list-low">
-                                    <button href="#" class="attractions-link__list" id="open-msc-81">
+                                    <button href="#" class="attractions-link__list" id="open-msc-800">
                                         <div class="attractions__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Третьяковская галерея.svg" alt="attraction">
                                         </div>
@@ -584,7 +554,7 @@
                                 </div>
 
                                 <div class="attractions__list attractions__list-low">
-                                    <button href="#" class="attractions-link__list" id="open-msc-91">
+                                    <button href="#" class="attractions-link__list" id="open-msc-900">
                                         <div class="attractions__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Воробьевы горы.svg" alt="attraction">
                                         </div>
@@ -638,7 +608,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list attractions__list-low">
-                                    <button href="#" class="attractions-link__list" id="open-msc-101">
+                                    <button href="#" class="attractions-link__list" id="open-msc-1000">
                                         <div class="attractions__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Парк Горького.svg" alt="attraction">
                                         </div>
@@ -692,7 +662,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="attractions__right">
+                        <button class="attractions__right animate-right">
                             <img src="assest\image\Vector.svg" alt="стрелочка">
                         </button>
                     </div>
@@ -703,18 +673,18 @@
             <section class="attractions" id="attractions_kazan">
                 <div class="container2">
                     <div class="attractions_kazan__title">
-                        <h1 class="attractions_kazan__title-t">
+                        <h1 class="attractions_kazan__title-t animate-right">
                             Достопримечательности Казани
                         </h1>
                     </div>
                     <div class="attractions_kazan__full-slider">
-                        <button class="attractions_kazan__left">
+                        <button class="attractions_kazan__left animate-left">
                             <img src="assest\image\Vectorl.svg" alt="стрелочка">
                         </button>
                         <div class="attractions_kazan__slider">
                             <div class="attractions_kazan__slider-line">
                                 <div class="attractions__list-low attractions_kazan__list">
-                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-111">
+                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-1100">
                                         <div class="attractions_kazan__image-low">
                                             <img class="attractions__image-low" src="./assest/image/башня.svg" alt="attraction">
                                         </div>
@@ -767,7 +737,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list-low attractions_kazan__list">
-                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-121">
+                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-1200">
                                         <div class="attractions_kazan__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Национальный музей Республики Татарстан.svg"
                                                 alt="attraction">
@@ -820,7 +790,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list-low attractions_kazan__list">
-                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-131">
+                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-1300">
                                         <div class="attractions_kazan__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Улица Баумана.svg" alt="attraction">
                                         </div>
@@ -870,7 +840,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list-low attractions_kazan__list">
-                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-141">
+                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-1400">
                                         <div class="attractions__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Пушечный двор.svg" alt="attraction">
                                         </div>
@@ -921,7 +891,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list-low attractions_kazan__list">
-                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-151">
+                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-1500">
                                         <div class="attractions_kazan__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Губернаторский (президентский) дворец.svg"
                                                 alt="attraction">
@@ -975,7 +945,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list-low attractions_kazan__list">
-                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-161">
+                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-1600">
                                         <div class="attractions_kazan__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Кремлёвская набережная.svg" alt="attraction">
                                         </div>
@@ -1026,7 +996,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list-low attractions_kazan__list">
-                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-171">
+                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-1700">
                                         <div class="attractions_kazan__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Центр семьи «Казан».svg" alt="attraction">
                                         </div>
@@ -1079,7 +1049,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list-low attractions_kazan__list">
-                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-181">
+                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-1800">
                                         <div class="attractions_kazan__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Благовещенский собор.svg" alt="attraction">
                                         </div>
@@ -1131,7 +1101,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list-low attractions_kazan__list">
-                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-191">
+                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-1900">
                                         <div class="attractions__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Театр кукол «Экият».svg" alt="attraction">
                                         </div>
@@ -1181,7 +1151,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list-low attractions_kazan__list">
-                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-201">
+                                    <button href="#" class="attractions-link_kazan__list" id="open-msc-2000">
                                         <div class="attractions_kazan__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Мечеть Кул-Шариф.svg" alt="attraction">
                                         </div>
@@ -1233,7 +1203,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="attractions_kazan__right">
+                        <button class="attractions_kazan__right animate-right">
                             <img src="assest\image\Vector.svg" alt="стрелочка">
                         </button>
                     </div>
@@ -1243,18 +1213,18 @@
             <section class="attractions_piter" id="attractions">
                 <div class="container2">
                     <div class="attractions_piter__title">
-                        <h1 class="attractions_piter__title-t">
+                        <h1 class="attractions_piter__title-t animate-left">
                             Достопримечательности Санкт-Петербурга
                         </h1>
                     </div>
                     <div class="attractions_piter__full-slider">
-                        <button class="attractions_piter__left">
+                        <button class="attractions_piter__left animate-left">
                             <img src="assest\image\Vectorl.svg" alt="стрелочка">
                         </button>
                         <div class="attractions_piter__slider">
                             <div class="attractions_piter__slider-line">
                                 <div class="attractions__list-low attractions_piter__list">
-                                    <button href="#" class="attractions-link_piter__list" id="open-msc-211">
+                                    <button href="#" class="attractions-link_piter__list" id="open-msc-2100">
                                         <div class="attractions_piter__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Невский проспект.svg" alt="attraction">
                                         </div>
@@ -1304,7 +1274,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list-low attractions_piter__list">
-                                    <button href="#" class="attractions-link_piter__list" id="open-msc-221">
+                                    <button href="#" class="attractions-link_piter__list" id="open-msc-2200">
                                         <div class="attractions_piter__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Русский музей.svg" alt="attraction">
                                         </div>
@@ -1353,7 +1323,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list-low attractions_piter__list">
-                                    <button href="#" class="attractions-link_piter__list" id="open-msc-231">
+                                    <button href="#" class="attractions-link_piter__list" id="open-msc-2300">
                                         <div class="attractions_piter__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Петропавловская крепость.svg" alt="attraction">
                                         </div>
@@ -1403,7 +1373,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list-low attractions_piter__list">
-                                    <button href="#" class="attractions-link_piter__list" id="open-msc-241">
+                                    <button href="#" class="attractions-link_piter__list" id="open-msc-2400">
                                         <div class="attractions__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Храм Спаса на Крови.svg" alt="attraction">
                                         </div>
@@ -1452,7 +1422,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list-low attractions_piter__list">
-                                    <button href="#" class="attractions-link_piter__list" id="open-msc-251">
+                                    <button href="#" class="attractions-link_piter__list" id="open-msc-2500">
                                         <div class="attractions_piter__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Эрмитаж.svg" alt="attraction">
                                         </div>
@@ -1504,7 +1474,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list-low attractions_piter__list">
-                                    <button href="#" class="attractions-link_piter__list" id="open-msc-261">
+                                    <button href="#" class="attractions-link_piter__list" id="open-msc-2600">
                                         <div class="attractions_piter__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Мариинский театр.svg" alt="attraction">
                                         </div>
@@ -1555,7 +1525,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list-low attractions_piter__list">
-                                    <button href="#" class="attractions-link_piter__list" id="open-msc-271">
+                                    <button href="#" class="attractions-link_piter__list" id="open-msc-2700">
                                         <div class="attractions_piter__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Летний сад.svg" alt="attraction">
                                         </div>
@@ -1604,7 +1574,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list-low attractions_piter__list">
-                                    <button href="#" class="attractions-link_piter__list" id="open-msc-281">
+                                    <button href="#" class="attractions-link_piter__list" id="open-msc-2800">
                                         <div class="attractions_piter__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Казанский собор.svg" alt="attraction">
                                         </div>
@@ -1656,7 +1626,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list-low attractions_piter__list">
-                                    <button href="#" class="attractions-link_piter__list" id="open-msc-291">
+                                    <button href="#" class="attractions-link_piter__list" id="open-msc-2900">
                                         <div class="attractions__image-low">
                                             <img class="attractions__image-low" src="./assest/image/Кунсткамера.svg" alt="attraction">
                                         </div>
@@ -1704,7 +1674,7 @@
                                     </div>
                                 </div>
                                 <div class="attractions__list-low attractions_piter__list">
-                                    <button href="#" class="attractions-link_piter__list" id="open-msc-301">
+                                    <button href="#" class="attractions-link_piter__list" id="open-msc-3000">
                                         <div class="attractions_piter__image-low">
                                             <img class="attractions__image-low" src="./assest/image/ Исаакиевский собор.svg" alt="attraction">
                                         </div>
@@ -1757,11 +1727,11 @@
                             </div>
                         </div>
 
-                        <button class="attractions_piter__right">
+                        <button class="attractions_piter__right animate-right">
                             <img src="assest\image\Vector.svg" alt="стрелочка">
                         </button>
                     </div>
-                    <div class="attractions__btnall">
+                    <div class="attractions__btnall animate-up">
                         <a href="all_attraction.html" class="attractions__btnall-btn">
                             Посмотреть все
                         </a>
@@ -1770,6 +1740,69 @@
             </section>
         </li>
     </ul>
+    <section class="revievs">
+        <div class="container">
+            <div class="revievs__title">
+                <h1 class="revievs__title-text">
+                    Оставьте свой отзыв
+                </h1>
+            </div>
+            <div class="revievs__wrap">
+                <form action="" id="revievsForm">
+                    <div class="revievs__forms animate-left">
+                        <div class="revievs__forms-wrap">
+                            <div class="revievs__forms-left">
+                                <p class="revievs__text">
+                                    Имя
+                                </p>    
+                                <div class="revievs__input-name">
+                                    <input class = "revievs__input" type="text" placeholder="Введите имя" id="inputName">
+                                </div>
+                            </div>
+                            <div class="revievs__forms-right">
+                                <p class="revievs__text">
+                                    E-mail адрес
+                                </p>    
+                                <div class="revievs__input-email">
+                                    <input class = "revievs__input" type="text" placeholder="Введите E-mail адрес" id="inputEmail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="revievs__rate">
+                            <p class="revievs__rate-text">
+                                Ваша оценка 
+                            </p>
+                            <div class="revievs__star">
+                                <img class="revievs__star-one" src="./assest/image/startNoYelloy.svg" alt="star" id="star1" width="42px">
+                                <img class="revievs__star-one" src="./assest/image/startNoYelloy.svg" alt="star" id="star2" width="42px">
+                                <img class="revievs__star-one" src="./assest/image/startNoYelloy.svg" alt="star" id="star3" width="42px">
+                                <img class="revievs__star-one" src="./assest/image/startNoYelloy.svg" alt="star" id="star4" width="42px">
+                                <img class="revievs__star-one" src="./assest/image/startNoYelloy.svg" alt="star" id="star5" width="42px">
+                            </div>
+                        </div>
+                        <div class="revievs__reviev">
+                            <p class="revievs__reviev-text">
+                                Оставьте отзыв
+                            </p>
+                            <div class="revievs__reviev-input">
+                                <textarea class="revievs__reviev-textarea" name="revievs" id="inputText" placeholder="Введите свой отзыв"></textarea>
+                            </div>
+                        </div>
+                        <div class="revievs__box">
+                            <input class="revievs__checkbox" type="checkbox" id="inputCheckbox">
+                            <p class="revievs__box-text">
+                                Я прочитал и принимаю Политику конфиденциальности
+                            </p>
+                        </div>
+                        <div class="revievs__sumbit">
+                            <button class="revievs__sumbit-text" type="sumbit">Отправить отзыв</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="revievs__revievs" id="revievs"></div>
+            </div>
+        </div>
+    </section>
     <section class="footer" id = "footer">
         <div class="container">
             <div class="footer__wrap">
@@ -1784,33 +1817,41 @@
                     <a href="#" class="footer__link-t">FAQ</a>
                 </div>
                 <div class="footer__image">
-                    <img class="footer__image-t" src="./assest/image/mail_ru_black_logo_icon_147112.svg" alt="">
-                    <img class="footer__image-t" src="./assest/image/telegram_black_logo_icon_147073 (1).svg" alt="">
-                    <img class="footer__image-t" src="./assest/image/vk_black_logo_icon_147058.svg" alt="">
+                    <a href="#">
+                        <img class="footer__image-t" src="./assest/image/mail_ru_black_logo_icon_147112.svg" alt="">
+                    </a>
+                    <a href="https://t.me/+_3mwCE9e_DE1Yjgy">
+                        <img class="footer__image-t" src="./assest/image/telegram_black_logo_icon_147073 (1).svg" alt="">
+                    </a>
+                    <a href="https://vk.com/id823204414">
+                        <img class="footer__image-t" src="./assest/image/vk_black_logo_icon_147058.svg" alt="">
+                    </a>
                 </div>
             </div>
             <div class="footer__line"></div>
             <div class="footer__link">
-                <button class="footer__link-t" id="returnBlack">
+                <p class="footer__link-t" id="returnBlack">
                     Политика конфиденциальности
-                </button>
-                <button class="footer__link-t" id="removeBlack">
+                </p>
+                <p class="footer__link-t" id="removeBlack">
                     ©️ 2024 2rism
-                </button>
+                </p>
             </div>
         </div>
     </section>
-    <div class="loader">
+    <div class="loader" id = "loader">
         <div class="loader__row">
           <div class="loader__item"></div>
         </div>
     </div>
     <script src="./assest/js/script_burger.js"></script>
-    <script src="./assest/js/script_2.js"></script>
-    <script src="./assest/js/script_search.js"></script>
-    <script src="./assest/js/script_search-poisk.js"></script>
-    <script src="./assest/js/script_modal.js"></script>
     <script src = "./assest/js/script_black.js"></script>
+    <script src="./assest/js/script_2.js"></script>
+    <script src="./assest/js/script_animated.js"></script>
+    <script src="./assest/js/seach_animate.js"></script>
+    <script src="./assest/js/script_search-poisk.js"></script>
+    <script src="./assest/js/revievs.js"></script>
     <script src = "./assest/js/loader.js"></script>
+    <script src="./assest/js/script_modal.js"></script>
 </body>
 </html>

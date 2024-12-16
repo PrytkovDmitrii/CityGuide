@@ -1,5 +1,27 @@
 
 let body = document.getElementById('body')
+
+// const handleSelector = (classname, clas2) => {
+//     let offsetLow = 0;
+//     const sliderLineLow = document.querySelector(classname);
+
+//     document.querySelector(clas2).addEventListener('click', function(){
+//         offsetLow += 342
+//         if (offsetLow > 3312){
+//             offsetLow = 0;
+//         }
+//         sliderLineLow.style.left = -offsetLow + 'px';
+//     });
+
+//     document.querySelector('.attractions__left').addEventListener('click', function(){
+//         offsetLow -= 342
+//         if (offsetLow < 0){
+//             offsetLow = 3312;
+//         }
+//         sliderLineLow.style.left = -offsetLow + 'px';
+//     });
+// }
+
 if (body.clientWidth < 992) {
     let offsetLow = 0;
     const sliderLineLow = document.querySelector('.attractions__slider-line');

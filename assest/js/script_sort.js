@@ -1,4 +1,4 @@
-document.querySelector('nav').addEventListener('click', event => {
+document.getElementById('attractions__sort').addEventListener('click', event => {
     let filterClass = event.target.dataset['f'];
     const filterBox = document.querySelectorAll('.box');
     
