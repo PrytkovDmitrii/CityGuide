@@ -8,6 +8,7 @@ const nextBtn = document.querySelector('.fullscreen__next');
 let currentImageIndex = 0;
 let images = [];
 
+<<<<<<< HEAD
 function getAttractionIdFromUrl() {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get('id');
@@ -45,6 +46,23 @@ function displayAttractionById(attractions, id) {
         <div class="attractions__description">
           <div class="attractions__description-title">
             <h3 class="attractions__description-title-text animate-right">${attraction.title}</h3>
+=======
+function displayAttractions(attractions) {
+  for (let i = 1; i < 31; i++) {
+    attractionsList.innerHTML = ''; 
+    document.getElementById('list' + i).addEventListener('click', event => {
+      document.getElementById("attractions__sort").classList.add("dnone");
+      document.getElementById("attractions__all-list").classList.add("dnone");
+      document.getElementById("attractions__pagin").classList.add("dnone");
+      document.getElementById("header__prev").classList.add("dnone");
+      attractions.forEach(attraction => {
+        if (attraction.id == i) {
+        const attractionDiv = document.createElement('div');
+        attractionDiv.classList.add('attraction');
+        attractionDiv.innerHTML = `
+          <div class="header__prev">
+            <a href="all_attraction.html" class="header__prev-btn" >⬅ Вернуться назад</a>
+>>>>>>> master
           </div>
           <div class="attractions__description-text" >
             <p class="animate-left">${attraction.description}</p>
