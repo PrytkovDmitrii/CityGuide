@@ -1,49 +1,48 @@
-const moon = document.getElementById('returnBlack');
+class ThemeSwitcher {
+  constructor() {
+    this.moon = document.getElementById('returnBlack');
+    this.body = document.getElementById('body');
+    this.footer = document.getElementById('footer');
+    this.sun = document.getElementById('sun');
+    this.header = document.getElementById('header');
+    this.line = document.getElementById('line');
+    this.isDarkTheme = false;
 
-function returnBlack(black) {
-    const body = document.getElementById("body");
-    const footer = document.getElementById("footer");
-    const sun = document.getElementById("sun");
-    const header = document.getElementById("header");
-    const line = document.getElementById("line");
+    this.init();
+  }
 
+  init() {
+    this.moon.addEventListener('click', () => this.toggleTheme());
+    this.loadThemeFromLocalStorage();
+  }
 
-    if (black) {
-        body.classList.add("black");
-        footer.classList.add("black");
-        moon.classList.add("black");
-        header.classList.add("black");
-        line.classList.add("black");
+  toggleTheme() {
+    this.isDarkTheme = !this.isDarkTheme;
+    this.applyTheme(this.isDarkTheme);
+    this.saveThemeToLocalStorage();
+  }
 
-        moon.id = "removeBlack";
-        sun.src = "./assest/image/result_islam8438-no-bg-preview (carve.photos).png";
-    } else {
-        body.classList.remove("black");
-        footer.classList.remove("black");
-        moon.classList.remove("black");
-        header.classList.remove("black");
-        line.classList.remove("black");
+  applyTheme(isDark) {
+    const elements = [this.body, this.footer, this.moon, this.header, this.line];
+    elements.forEach((element) => {
+      isDark ? element.classList.add('black') : element.classList.remove('black');
+    });
 
-        moon.id = "returnBlack";
-        sun.src = "./assest/image/result_3dac58864881d859b7da50510e9daa13-no-bg-preview%20(carve.photos).png";
-    }
+    this.moon.id = isDark ? 'removeBlack' : 'returnBlack';
+    this.sun.src = isDark
+      ? './assest/image/result_islam8438-no-bg-preview (carve.photos).png'
+      : './assest/image/result_3dac58864881d859b7da50510e9daa13-no-bg-preview%20(carve.photos).png';
+  }
+
+  saveThemeToLocalStorage() {
+    localStorage.setItem('theme', this.isDarkTheme ? 'black' : '');
+  }
+
+  loadThemeFromLocalStorage() {
+    const savedTheme = localStorage.getItem('theme');
+    this.isDarkTheme = savedTheme == 'black';
+    this.applyTheme(this.isDarkTheme);
+  }
 }
 
-moon.addEventListener("click", function() {
-    const black = moon.id === "returnBlack";
-
-    returnBlack(black);
-
-    localStorage.setItem("theme", black ? "black" : "");
-
-    console.log(moon.id);
-});
-
-window.addEventListener("load", function() {
-    const saveLocal = localStorage.getItem("theme");
-    if (saveLocal === "black") {
-        returnBlack(true);
-    } else {
-        returnBlack(false);
-    }
-});
+const themeSwitcher = new ThemeSwitcher();

@@ -149,7 +149,7 @@ a {
   margin-top: 70px;
   border-radius: 10px;
   background-color: #7B61FF;
-  z-index: 2;
+  z-index: 5;
 }
 .header__burger-btn span {
   position: absolute;
@@ -157,7 +157,7 @@ a {
   height: 3px;
   background-color: #fff;
   left: 10px;
-  z-index: 2;
+  z-index: 5;
   transition: transform 0.6s, opacity 0.5s;
 }
 .header__burger-btn span:nth-child(1) {
@@ -179,6 +179,7 @@ a {
   margin-top: 82px;
 }
 .header__menu {
+  z-index: 3;
   margin-top: 55px;
   background-color: #D9D9D9;
   padding: 11px 60px 11px;

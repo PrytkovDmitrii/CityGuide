@@ -1,145 +1,72 @@
+class Slider {
+  constructor(sliderLine, rightButton, leftButton, step, maxOffset) {
+    this.sliderLine = sliderLine;
+    this.rightButton = rightButton;
+    this.leftButton = leftButton;
+    this.step = step;
+    this.maxOffset = maxOffset;
+    this.offset = 0;
 
-let body = document.getElementById('body')
+    this.init();
+  }
 
-// const handleSelector = (classname, clas2) => {
-//     let offsetLow = 0;
-//     const sliderLineLow = document.querySelector(classname);
+  init() {
+    this.rightButton.addEventListener('click', () => this.moveRight());
+    this.leftButton.addEventListener('click', () => this.moveLeft());
+  }
 
-//     document.querySelector(clas2).addEventListener('click', function(){
-//         offsetLow += 342
-//         if (offsetLow > 3312){
-//             offsetLow = 0;
-//         }
-//         sliderLineLow.style.left = -offsetLow + 'px';
-//     });
+  moveRight() {
+    this.offset += this.step;
+    if (this.offset > this.maxOffset) {
+      this.offset = 0;
+    }
+    this.sliderLine.style.left = -this.offset + 'px';
+  }
 
-//     document.querySelector('.attractions__left').addEventListener('click', function(){
-//         offsetLow -= 342
-//         if (offsetLow < 0){
-//             offsetLow = 3312;
-//         }
-//         sliderLineLow.style.left = -offsetLow + 'px';
-//     });
-// }
-
-if (body.clientWidth < 992) {
-    let offsetLow = 0;
-    const sliderLineLow = document.querySelector('.attractions__slider-line');
-
-    document.querySelector('.attractions__right').addEventListener('click', function(){
-        offsetLow += 342
-        if (offsetLow > 3312){
-            offsetLow = 0;
-        }
-        sliderLineLow.style.left = -offsetLow + 'px';
-    });
-
-    document.querySelector('.attractions__left').addEventListener('click', function(){
-        offsetLow -= 342
-        if (offsetLow < 0){
-            offsetLow = 3312;
-        }
-        sliderLineLow.style.left = -offsetLow + 'px';
-    });
-
-
-    let offset1Low = 0; 
-    const sliderLine1Low = document.querySelector('.attractions_kazan__slider-line');
-
-    document.querySelector('.attractions_kazan__right').addEventListener('click', function(){
-        offset1Low += 342
-        if (offset1Low > 3312){
-            offset1Low = 0;
-        }
-        sliderLine1Low.style.left = -offset1Low + 'px';
-    });
-
-    document.querySelector('.attractions_kazan__left').addEventListener('click', function(){
-        offset1Low -= 342
-        if (offset1Low < 0){
-            offset1Low = 3312;
-        }
-        sliderLine1Low.style.left = -offset1Low + 'px';
-    });
-
-    let offset2Low = 0; 
-    const sliderLine2Low = document.querySelector('.attractions_piter__slider-line');
-
-    document.querySelector('.attractions_piter__right').addEventListener('click', function(){
-        offset2Low += 342
-        if (offset2Low > 3312){
-            offset2Low = 0;
-        }
-        sliderLine2Low.style.left = -offset2Low + 'px';
-    });
-
-    document.querySelector('.attractions_piter__left').addEventListener('click', function(){
-        offset2Low -= 342
-        if (offset2Low < 0){
-            offset2Low = 3312;
-        }
-        sliderLine2Low.style.left = -offset2Low + 'px';
-    });
-    
-} else {
-    let offset = 0;
-    const sliderLine = document.querySelector('.attractions__slider-line');
-
-    document.querySelector('.attractions__right').addEventListener('click', function(){
-        offset += 522
-        if (offset > 3312){
-            offset = 0;
-        }
-        sliderLine.style.left = -offset + 'px';
-    });
-
-    document.querySelector('.attractions__left').addEventListener('click', function(){
-        offset -= 522
-        if (offset < 0){
-            offset = 3312;
-        }
-        sliderLine.style.left = -offset + 'px';
-    });
-
-
-
-    let offset1 = 0; 
-    const sliderLine1 = document.querySelector('.attractions_kazan__slider-line');
-
-    document.querySelector('.attractions_kazan__right').addEventListener('click', function(){
-        offset1 += 522
-        if (offset1 > 3654){
-            offset1 = 0;
-        }
-        sliderLine1.style.left = -offset1 + 'px';
-    });
-
-    document.querySelector('.attractions_kazan__left').addEventListener('click', function(){
-        offset1 -= 522
-        if (offset1 < 0){
-            offset1 = 3654;
-        }
-        sliderLine1.style.left = -offset1 + 'px';
-    });
-
-
-
-    let offset2 = 0; 
-    const sliderLine2 = document.querySelector('.attractions_piter__slider-line');
-
-    document.querySelector('.attractions_piter__right').addEventListener('click', function(){
-        offset2 += 522
-        if (offset2 > 3654){
-            offset2 = 0;
-        }
-        sliderLine2.style.left = -offset2 + 'px';
-    });
-
-    document.querySelector('.attractions_piter__left').addEventListener('click', function(){
-        offset2 -= 522
-        if (offset2 < 0){
-            offset2 = 3654;
-        }
-        sliderLine2.style.left = -offset2 + 'px';
-    });
+  moveLeft() {
+    this.offset -= this.step;
+    if (this.offset < 0) {
+      this.offset = this.maxOffset;
+    }
+    this.sliderLine.style.left = -this.offset + 'px';
+  }
 }
+
+function initSliders() {
+  const body = document.getElementById('body');
+  const isMobile = body.clientWidth < 992;
+
+  const slidersConfig = [
+    {
+      sliderLine: '.attractions__slider-line',
+      rightButton: '.attractions__right',
+      leftButton: '.attractions__left',
+      step: isMobile ? 342 : 522,
+      maxOffset: isMobile ? 3312 : 3312,
+    },
+    {
+      sliderLine: '.attractions_kazan__slider-line',
+      rightButton: '.attractions_kazan__right',
+      leftButton: '.attractions_kazan__left',
+      step: isMobile ? 342 : 522,
+      maxOffset: isMobile ? 3312 : 3654,
+    },
+    {
+      sliderLine: '.attractions_piter__slider-line',
+      rightButton: '.attractions_piter__right',
+      leftButton: '.attractions_piter__left',
+      step: isMobile ? 342 : 522,
+      maxOffset: isMobile ? 3312 : 3654,
+    },
+  ];
+
+  slidersConfig.forEach((config) => {
+    const sliderLine = document.querySelector(config.sliderLine);
+    const rightButton = document.querySelector(config.rightButton);
+    const leftButton = document.querySelector(config.leftButton);
+
+    new Slider(sliderLine, rightButton, leftButton, config.step, config.maxOffset);
+  });
+}
+
+window.addEventListener('DOMContentLoaded', initSliders);

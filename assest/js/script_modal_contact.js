@@ -1,15 +1,40 @@
-document.getElementById("open_modal").addEventListener("click", function () {
-    document.getElementById("modal").classList.add("open");
-});
-document.getElementById("close_modal").addEventListener("click", function () {
-    document.getElementById("modal").classList.remove("open");
-});
+class ModalManager {
+  constructor(modalId, openButtonId, closeButtonId, submitButtonId, newsletterButtonId) {
+    this.modal = document.getElementById(modalId);
+    this.openButton = document.getElementById(openButtonId);
+    this.closeButton = document.getElementById(closeButtonId);
+    this.submitButton = document.getElementById(submitButtonId);
+    this.newsletterButton = document.getElementById(newsletterButtonId);
 
-document.getElementById("button").addEventListener("click", function () {
-    alert("Форма отправлена!");
-    document.getElementById("modal").classList.remove("open");
-});
+    this.init();
+  }
 
-document.getElementById("newsletter").addEventListener("click", function () {
-    alert("Вы подписались на рассылку!\nТеперь на вашу почту будут приходить различные уведомления! :D");
-});
+  init() {
+    this.openButton.addEventListener('click', () => this.openModal());
+
+    this.closeButton.addEventListener('click', () => this.closeModal());
+
+    this.submitButton.addEventListener('click', () => this.handleSubmit());
+
+    this.newsletterButton.addEventListener('click', () => this.handleNewsletter());
+  }
+
+  openModal() {
+    this.modal.classList.add('open');
+  }
+
+  closeModal() {
+    this.modal.classList.remove('open');
+  }
+
+  handleSubmit() {
+    alert('Форма отправлена!');
+    this.closeModal();
+  }
+
+  handleNewsletter() {
+    alert('Вы подписались на рассылку!\nТеперь на вашу почту будут приходить различные уведомления! :D');
+  }
+}
+
+const modalManager = new ModalManager('modal', 'open_modal', 'close_modal', 'button', 'newsletter');

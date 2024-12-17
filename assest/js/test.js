@@ -18,11 +18,7 @@ setTimeout(() => {
     .then(response => response.json())
     .then(attractions => {
       const attractionId = getAttractionIdFromUrl();
-      if (attractionId) {
-        displayAttractionById(attractions, attractionId);
-      } else {
-        displayAttractions(attractions);
-      }
+      displayAttractionById(attractions, attractionId);
     })
     .catch(error => console.error('Ошибка:', error));
 }, 100);

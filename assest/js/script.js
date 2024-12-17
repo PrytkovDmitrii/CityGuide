@@ -1,43 +1,40 @@
-let body = document.getElementById('body')
-if (body.clientWidth < 992) {
-    let offset = 0; 
-    const sliderLine = document.querySelector('.catalog__slider-line');
+class Slider {
+  constructor(sliderLineSelector, rightButtonSelector, leftButtonSelector, step, maxOffset) {
+    this.sliderLine = document.querySelector(sliderLineSelector);
+    this.rightButton = document.querySelector(rightButtonSelector);
+    this.leftButton = document.querySelector(leftButtonSelector);
+    this.step = step;
+    this.maxOffset = maxOffset;
+    this.offset = 0;
 
-    document.querySelector('.catalog__right').addEventListener('click', function(){
-        offset += 310
-        if (offset > 620){
-            offset = 0;
-        }
-        sliderLine.style.left = -offset + 'px';
-    });
+    this.init();
+  }
 
-    document.querySelector('.catalog__left').addEventListener('click', function(){
-        offset -= 310
-        if (offset < 0){
-            offset = 620;
-        }
-        sliderLine.style.left = -offset + 'px';
-    });
-} else {
-    let offset = 0; 
-    const sliderLine = document.querySelector('.catalog__slider-line');
-    
-    document.querySelector('.catalog__right').addEventListener('click', function(){
-        offset += 900
-        if (offset > 1800){
-            offset = 0;
-        }
-        sliderLine.style.left = -offset + 'px';
-    });
-    
-    document.querySelector('.catalog__left').addEventListener('click', function(){
-        offset -= 900
-        if (offset < 0){
-            offset = 1800;
-        }
-        sliderLine.style.left = -offset + 'px';
-    });
-    
-    
+  init() {
+    this.rightButton.addEventListener('click', () => this.moveRight());
+    this.leftButton.addEventListener('click', () => this.moveLeft());
+  }
+
+  moveRight() {
+    this.offset += this.step;
+    if (this.offset > this.maxOffset) {
+      this.offset = 0;
+    }
+    this.sliderLine.style.left = -this.offset + 'px';
+  }
+
+  moveLeft() {
+    this.offset -= this.step;
+    if (this.offset < 0) {
+      this.offset = this.maxOffset;
+    }
+    this.sliderLine.style.left = -this.offset + 'px';
+  }
 }
 
+const body = document.getElementById('body');
+if (body.clientWidth < 992) {
+  const mobileSlider = new Slider('.catalog__slider-line', '.catalog__right', '.catalog__left', 310, 620);
+} else {
+  const desktopSlider = new Slider('.catalog__slider-line', '.catalog__right', '.catalog__left', 900, 1800);
+}

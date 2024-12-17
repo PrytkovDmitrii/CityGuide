@@ -1,17 +1,33 @@
-const openModal = (id) => {
-    document.getElementById("open-msc-" + id + '00').addEventListener("click",function() {
-        console.log("click")
-        document.getElementById("modal-msc-" + id).classList.add("open")
-    });
-};
+class ModalManager {
+  constructor(modalIds) {
+    this.modalIds = modalIds;
+    this.init();
+  }
 
-const closeModal = (id) => {
-    document.getElementById("close_modal-" + id).addEventListener("click",function() {
-        document.getElementById("modal-msc-" + id).classList.remove("open")
+  init() {
+    this.modalIds.forEach((id) => {
+      this.setupModal(id);
     });
+  }
+
+  setupModal(id) {
+    const openButton = document.getElementById(`open-msc-${id}00`);
+    const closeButton = document.getElementById(`close_modal-${id}`);
+    const modal = document.getElementById(`modal-msc-${id}`);
+
+    openButton.addEventListener('click', () => this.openModal(modal));
+    closeButton.addEventListener('click', () => this.closeModal(modal));
+
+  }
+
+  openModal(modal) {
+    modal.classList.add('open');
+  }
+
+  closeModal(modal) {
+    modal.classList.remove('open');
+  }
 }
 
-for (let i=1; i<31; i++) {
-    openModal(i);
-    closeModal(i);
-};
+const modalIds = Array.from({ length: 30 }, (_, i) => i + 1); 
+const modalManager = new ModalManager(modalIds);

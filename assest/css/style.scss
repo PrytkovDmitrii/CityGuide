@@ -1280,15 +1280,16 @@ a {
             margin-left: 75px;
         }
         &__prev{
-            margin-bottom: 30px;
+            margin-top: 100px;
             &-btn {
+                position: relative;
+                top: -65px;
                 max-height: 100px;
             }
         }
         &__switch{
-            position: relative;
             min-width: 60px;
-            top: 7px;
+
         }
     }
     .search{
@@ -1340,6 +1341,7 @@ a {
         &__all-list{
             display: flex;
             flex-direction: column;
+            margin-left: 20px;
         }
         &__list{
             width: 350px;

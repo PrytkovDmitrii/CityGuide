@@ -1212,15 +1212,15 @@ a {
     margin-left: 75px;
   }
   .header__prev {
-    margin-bottom: 30px;
+    margin-top: 100px;
   }
   .header__prev-btn {
+    position: relative;
+    top: -65px;
     max-height: 100px;
   }
   .header__switch {
-    position: relative;
     min-width: 60px;
-    top: 7px;
   }
   .search {
     height: 60px;
@@ -1272,6 +1272,7 @@ a {
   .attractions__all-list {
     display: flex;
     flex-direction: column;
+    margin-left: 20px;
   }
   .attractions__list {
     width: 350px;
